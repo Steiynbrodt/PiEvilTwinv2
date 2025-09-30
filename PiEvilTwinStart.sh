@@ -2,10 +2,10 @@
 
 service apache2 start
 sleep 1
-ifconfig wlan1 down
-macchanger -A wlan1
+ifconfig wlan0 down
+macchanger -A wlan0
 sleep 1 
-ifconfig wlan1 up
+ifconfig wlan0 up
 sleep 1
 hostapd -B /etc/hostapd/hostapd.conf
 sleep 2
