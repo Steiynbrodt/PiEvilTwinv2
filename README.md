@@ -12,7 +12,7 @@ Once you've done installing raspiOS into your rpi, reconnect using your password
 ```
 sudo apt-get update
 sudo apt-get install -y git php dnsmasq dnsmasq-base macchanger hostapd
-git clone https://github.com/unrealistic-reality/PiEvilTwin
+git clone https://github.com/Steiynbrodt/PiEvilTwinv2
 cd PiEvilTwin
 chmod +x install.sh
 sudo ./install.sh
